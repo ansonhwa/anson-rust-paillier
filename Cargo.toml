@@ -1,0 +1,45 @@
+[package]
+name = "paillier"
+version = "0.3.4"
+edition = "2018"
+
+[dependencies]
+rayon = "1.1"
+serde = { version = "1.0", features = ["derive"] }
+
+[dependencies.curv]
+git = "https://github.com/ansonhwa/curv"
+tag = "v0.2.3"
+
+[dev-dependencies]
+bencher = "0.1"
+serde_json = "1.0"
+rand = "0.6"
+
+[[bench]]
+name = "arith"
+harness = false
+
+[[bench]]
+name = "encryption"
+harness = false
+
+[[bench]]
+name = "keygen"
+harness = false
+
+[[bench]]
+name = "proof"
+harness = false
+
+[[example]]
+name = "basic"
+
+[[example]]
+name = "core"
+
+[[example]]
+name = "packed"
+
+[[example]]
+name = "simple-voting"
